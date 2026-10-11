@@ -1,0 +1,162 @@
+/* ==========================================
+   CONFIGURACIÓN Y PALETA DE COLORES (CYBER-TECH)
+   ========================================== */
+:root {
+    --bg-base: #030712;
+    --bg-card: #0f172a;
+    --bg-card-hover: #1e293b;
+    --neon-blue: #38bdf8;
+    --neon-purple: #818cf8;
+    --border-glow: rgba(56, 189, 248, 0.3);
+    --text-gray: #94a3b8;
+}
+
+body {
+    background-color: var(--bg-base);
+    color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.5px;
+}
+
+/* ==========================================
+   BARRA DE NAVEGACIÓN INDEPENDIENTE
+   ========================================== */
+.navbar {
+    background: rgba(3, 7, 18, 0.9) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: var(--text-gray) !important;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--neon-blue) !important;
+    background-color: rgba(56, 189, 248, 0.08);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.15);
+}
+
+/* ==========================================
+   EFECTOS AVANZADOS EN BOTONES (NEON & GLOW)
+   ========================================== */
+.btn-neon-primary {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(135deg, var(--neon-blue) 0%, var(--neon-purple) 100%);
+    color: #030712;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 12px 30px;
+    border-radius: 8px;
+    border: none;
+    text-decoration: none;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+}
+
+.btn-neon-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: 0.6s;
+}
+
+.btn-neon-primary:hover {
+    color: #030712;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 0 35px rgba(56, 189, 248, 0.8), 0 0 15px rgba(129, 140, 248, 0.6);
+}
+
+.btn-neon-primary:hover::before {
+    left: 100%;
+}
+
+.btn-neon-outline {
+    position: relative;
+    display: inline-block;
+    background: transparent;
+    color: var(--neon-blue);
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 12px 30px;
+    border-radius: 8px;
+    border: 1px solid var(--neon-blue);
+    text-decoration: none;
+    transition: all 0.4s ease;
+    box-shadow: inset 0 0 10px rgba(56, 189, 248, 0.1);
+}
+
+.btn-neon-outline:hover {
+    background-color: rgba(56, 189, 248, 0.15);
+    color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.6), inset 0 0 15px rgba(56, 189, 248, 0.4);
+    transform: translateY(-3px);
+}
+
+/* ==========================================
+   TARJETAS Y CONTENEDORES
+   ========================================== */
+.card-tech {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(56, 189, 248, 0.12);
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+
+.card-tech:hover {
+    background-color: var(--bg-card-hover);
+    border-color: var(--neon-blue);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(56, 189, 248, 0.2);
+}
+
+.text-neon-blue {
+    color: var(--neon-blue) !important;
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+}
+
+.badge-tech {
+    background-color: rgba(56, 189, 248, 0.1);
+    color: var(--neon-blue);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.avatar-placeholder {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    border: 2px solid var(--neon-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
+    margin: 0 auto;
+}
